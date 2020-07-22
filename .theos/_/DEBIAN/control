@@ -1,0 +1,10 @@
+Package: com.yourcompany.cmd
+Name: cmd
+Architecture: iphoneos-arm
+Description: An awesome tool of some sort!!
+Maintainer: Cao Phuoc Thanh
+Author: Cao Phuoc Thanh
+Section: System
+Tag: role::hacker
+Version: 0.0.1-1+debug
+Installed-Size: 132
