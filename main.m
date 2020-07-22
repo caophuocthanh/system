@@ -8,16 +8,14 @@ NSString* runAsCommand(NSString* cmd) {
     [task setLaunchPath: @"/bin/sh"];
     [task setArguments:@[@"-c", [NSString stringWithFormat:@"%@", cmd]]];
     [task setStandardOutput:pipe];
-
     NSFileHandle* file = [pipe fileHandleForReading];
     [task launch];
-
     return [[NSString alloc] initWithData:[file readDataToEndOfFile] encoding:NSUTF8StringEncoding];
 }
 
 
 int main(int argc, char *argv[], char *envp[]) {
-  NSString* output = runAsCommand(@"echo hello");
+  NSString* output = runAsCommand(@"ls -als");
   NSLog(@"output: %@", output);
   return 0;
 }
